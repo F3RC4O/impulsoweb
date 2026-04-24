@@ -262,21 +262,25 @@ export default function Home() {
 
         <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
 
-          {[
+         {
+          [
             {
+              slug: "registro",
               img: "/proyecto1.jpg",
               title: "Sistema de Registro de Usuarios",
-              desc: "Desarrollo de sistema completo de autenticación, registro y gestión de usuarios con base de datos segura."
+              desc: "Sistema completo de autenticación y gestión de usuarios."
             },
             {
+              slug: "gastos",
               img: "/proyecto2.jpg",
               title: "Sistema de Control de Gastos",
-              desc: "Aplicación para registrar, categorizar y analizar gastos, permitiendo mejorar la administración financiera."
+              desc: "Control y análisis de gastos."
             },
             {
+              slug: "reportes",
               img: "/proyecto3.jpg",
               title: "Automatización de Reportes",
-              desc: "Generación automática de reportes en PDF y Excel a partir de datos procesados, optimizando tiempos de trabajo."
+              desc: "Generación automática de reportes."
             }
           ].map((project, i) => (
             <Reveal key={i}>
@@ -298,9 +302,9 @@ export default function Home() {
                     </p>
                   </div>
 
-                  <span className="text-orange-500 text-sm mt-4">
-                    Ver proyecto →
-                  </span>
+                  <a href={`/proyectos/${project.slug}`} className="text-orange-500 text-sm mt-4 inline-block">
+                    Ver detalle →
+                  </a>
                 </div>
 
               </div>
