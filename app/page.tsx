@@ -1,5 +1,5 @@
 'use client'
-
+import Link from "next/link"
 import Image from "next/image";
 import { motion, useScroll, useTransform } from 'framer-motion'
 import { useEffect, useState } from 'react'
@@ -31,13 +31,12 @@ function Navbar() {
       <div className="max-w-6xl mx-auto flex items-center justify-between px-6 py-4">
 
         {/* LOGO */}
-        <div className="flex items-center gap-2">
+        <Link href="/" className="flex items-center gap-2 cursor-pointer">
           <div className="w-8 h-8 bg-orange-500 rounded-lg flex items-center justify-center text-white font-bold">
             IW
           </div>
           <span className="font-bold text-xl tracking-wide">Impulso Web</span>
-        </div>
-
+        </Link>
         {/* DESKTOP MENU */}
         <div className="hidden md:flex gap-8 text-lg font-semibold">
           <a href="#servicios" className="hover:text-orange-500 transition tracking-wide">Servicios</a>
